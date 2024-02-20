@@ -1,3 +1,13 @@
+[submodule "binary"]
+	path = binary
+	url = https://github.com/opencobra/COBRA.binary.git
+	ignore = dirty
+	branch = master
+[submodule "binary"]
+	path = binary
+	url = https://github.com/opencobra/COBRA.binary.git
+	ignore = dirty
+	branch = gh-pages
 [submodule "GeoCalcLib"]
 	path = external/analysis/GeoCalcLib
 	url = https://github.com/rmtfleming/GeoCalcLib.git
@@ -47,6 +57,7 @@
 	path = papers
 	url = https://github.com/opencobra/COBRA.papers.git
 	ignore = dirty
+        branch = master
 [submodule "octave-networks-toolbox"]
 	path = external/analysis/octave-networks-toolbox
 	url = https://github.com/aeolianine/octave-networks-toolbox.git
@@ -70,3 +81,10 @@
 [submodule "external/base/io/xlread"]
 	path = external/base/io/xlread
 	url = https://github.com/tpfau/xlread
+        ignore = dirty
+        branch = master
+[submodule "external/visualization/MatGPT"]
+	path = external/visualization/MatGPT
+	url = https://github.com/toshiakit/MatGPT.git
+        ignore = dirty
+        branch = main
