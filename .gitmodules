@@ -1,11 +1,11 @@
 [submodule "binary"]
 	path = binary
-	url = https://github.com/opencobra/COBRA.binary.git
+	url = https://github.com/opencobra/COBRA.binary
 	ignore = dirty
 	branch = master
 [submodule "binary"]
 	path = binary
-	url = https://github.com/opencobra/COBRA.binary.git
+	url = https://github.com/opencobra/COBRA.binary
 	ignore = dirty
 	branch = gh-pages
 [submodule "GeoCalcLib"]
