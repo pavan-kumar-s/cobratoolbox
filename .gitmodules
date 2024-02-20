@@ -1,5 +1,5 @@
 [submodule "binary"]
-	path = binary
+	path = ./binary
 	url = https://github.com/opencobra/COBRA.binary.git
 	ignore = dirty
 	branch = master
