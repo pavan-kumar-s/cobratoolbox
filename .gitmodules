@@ -2,11 +2,6 @@
 	path = binary
 	url = https://github.com/opencobra/COBRA.binary
 	ignore = dirty
-	branch = master
-[submodule "binary"]
-	path = binary
-	url = https://github.com/opencobra/COBRA.binary
-	ignore = dirty
 	branch = gh-pages
 [submodule "GeoCalcLib"]
 	path = external/analysis/GeoCalcLib
@@ -83,8 +78,3 @@
 	url = https://github.com/tpfau/xlread
         ignore = dirty
         branch = master
-[submodule "external/visualization/MatGPT"]
-	path = external/visualization/MatGPT
-	url = https://github.com/toshiakit/MatGPT.git
-        ignore = dirty
-        branch = main
