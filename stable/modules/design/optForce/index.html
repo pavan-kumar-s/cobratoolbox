@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -70,7 +70,7 @@
     <link rel="top" title="The COBRA Toolbox" href="../../../index.html"/>
         <link rel="up" title="Design" href="../index.html"/>
         <link rel="next" title="Optenvelope" href="../optEnvelope/index.html"/>
-        <link rel="prev" title="Design" href="../index.html"/> 
+        <link rel="prev" title="Optforcegams" href="../optForceGAMS/index.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -92,7 +92,7 @@
           
 
           
-            <img src="/cobratoolbox/stable/_static/img/logo.png" class="logo" alt="cobratoolbox logo" />
+            <img src="https://king.nuigalway.ie/cobratoolbox/img/cobratoolbox_logo_transparent.png" class="logo" alt="cobratoolbox logo" />
           
           </a>
 
@@ -160,9 +160,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../../base/index.html">Base</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../dataIntegration/index.html">Dataintegration</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Design</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../optForceGAMS/index.html">Optforcegams</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Optforce</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../optEnvelope/index.html">Optenvelope</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../optForceGAMS/index.html">Optforcegams</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../reconstruction/index.html">Reconstruction</a></li>
@@ -223,10 +223,10 @@
 strain and in the mutant strain. Constraints should be specified for at
 least one strain (wild-type or mutant)</p>
 <dl class="field-list">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>[minFluxesW, maxFluxesW, minFluxesM, maxFluxesM, boundsW, boundsM] = FVAOptForce</strong> (<em>model, constrWT, constrMT</em>)</p>
 </dd>
-<dt class="field-even">INPUTS</dt>
+<dt class="field-even">INPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>model</strong> – (structure) COBRA metabolic model with at least
 the following fields:</p>
@@ -271,7 +271,7 @@ E.g.: <cite>constrW = struct(‘rxnList’, {{‘R75’; ‘EX_suc’}}, ‘rxnV
 </li>
 </ul>
 </dd>
-<dt class="field-odd">OUTPUTS</dt>
+<dt class="field-odd">OUTPUTS<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>minFluxesW</strong> – (double array) minimum values for reactions in
 the wild-type strain. It has dimensions
@@ -311,10 +311,10 @@ downregulations, knockouts) in the model. Flux for each intervened
 reaction in the mutant must be specified in the structure solution (third
 input).</p>
 <dl class="field-list">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>[maxGrowthRate, minTarget, maxTarget] = analyzeOptForceSol</strong> (<em>model, targetRxn, solution, relax, tol</em>)</p>
 </dd>
-<dt class="field-even">INPUTS</dt>
+<dt class="field-even">INPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>model</strong> – (structure) COBRA metabolic model with at least
 the following fields:</p>
@@ -352,7 +352,7 @@ reactions.</p></li>
 </li>
 </ul>
 </dd>
-<dt class="field-odd">OPTIONAL INPUTS</dt>
+<dt class="field-odd">OPTIONAL INPUTS<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>relax</strong> – (double) Boolean to describe if constraints
 should be apply in an rounded way (<cite>relax = 1</cite>)
@@ -363,7 +363,7 @@ contraints.
 Default: <cite>tol = 1e-7</cite></p></li>
 </ul>
 </dd>
-<dt class="field-even">OUTPUTS</dt>
+<dt class="field-even">OUTPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>maxGrowthRate</strong> – (double) Maximum growth rate of mutant strain
 (after applying the inverventions)</p></li>
@@ -383,10 +383,10 @@ max growth rate</p></li>
 bilevel mixed integer linear programming  problem to find a first order
 <cite>MustL</cite> set.</p>
 <dl class="field-list">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>[mustLSet, posMustL] = findMustL</strong> (<em>model, minFluxesW, maxFluxesW, varargin</em>)</p>
 </dd>
-<dt class="field-even">INPUTS</dt>
+<dt class="field-even">INPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>model</strong> – (structure) COBRA metabolic model
 with at least the following fields:</p>
@@ -415,7 +415,7 @@ This can be obtained by running the
 function <cite>FVAOptForce</cite>.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">OPTIONAL INPUTS</dt>
+<dt class="field-odd">OPTIONAL INPUTS<span class="colon">:</span></dt>
 <dd class="field-odd"><ul>
 <li><p><strong>constrOpt</strong> – (structure) structure containing
 additional contraints. Include here only
@@ -461,7 +461,7 @@ Default: 1</p></li>
 Default: 0</p></li>
 </ul>
 </dd>
-<dt class="field-even">OUTPUTS</dt>
+<dt class="field-even">OUTPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>mustLSet</strong> – (cell array) Size: number of reactions found X 1.
 Cell array containing the
@@ -534,10 +534,10 @@ e1000744</cite>. <a class="reference external" href="https://doi.org/10.1371/jou
 bilevel mixed integer linear programming  problem to find a second order
 <cite>MustLL</cite> set.</p>
 <dl class="field-list">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>[mustLL, posMustLL, mustLL_linear, pos_mustLL_linear] = findMustLL</strong> (<em>model, minFluxesW, maxFluxesW, varargin</em>)</p>
 </dd>
-<dt class="field-even">INPUTS</dt>
+<dt class="field-even">INPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>model</strong> – (structure) COBRA metabolic model
 with at least the following fields:</p>
@@ -684,10 +684,10 @@ e1000744</cite>. <a class="reference external" href="https://doi.org/10.1371/jou
 bilevel mixed integer linear programming  problem to find a first order
 <cite>MustU</cite> set.</p>
 <dl class="field-list">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>[mustUSet, posMustU] = findMustU</strong> (<em>model, minFluxesW, maxFluxesW, varargin</em>)</p>
 </dd>
-<dt class="field-even">INPUTS</dt>
+<dt class="field-even">INPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>model</strong> – (structure) COBRA metabolic model
 with at least the following fields:</p>
@@ -716,7 +716,7 @@ This can be obtained by running the
 function <cite>FVAOptForce</cite>.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">OPTIONAL INPUTS</dt>
+<dt class="field-odd">OPTIONAL INPUTS<span class="colon">:</span></dt>
 <dd class="field-odd"><ul>
 <li><p><strong>constrOpt</strong> – (structure) structure containing
 additional contraints. Include here only
@@ -762,7 +762,7 @@ Default: 1</p></li>
 Default: 0</p></li>
 </ul>
 </dd>
-<dt class="field-even">OUTPUTS</dt>
+<dt class="field-even">OUTPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>mustUSet</strong> – (cell array) Size: number of reactions found X 1
 cell array containing the
@@ -834,10 +834,10 @@ e1000744</cite>. <a class="reference external" href="https://doi.org/10.1371/jou
 bilevel mixed integer linear programming  problem to find a second order
 <cite>MustUL</cite> set.</p>
 <dl class="field-list">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>[mustUL, posMustUL, mustUL_linear, pos_mustUL_linear] = findMustUL</strong> (<em>model, minFluxesW, maxFluxesW, varargin</em>)</p>
 </dd>
-<dt class="field-even">INPUTS</dt>
+<dt class="field-even">INPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>model</strong> – (structure) COBRA metabolic model
 with at least the following fields:</p>
@@ -983,10 +983,10 @@ e1000744</cite>. <a class="reference external" href="https://doi.org/10.1371/jou
 bilevel mixed integer linear programming  problem to find a second order
 <cite>MustUU</cite> set.</p>
 <dl class="field-list">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>[mustUU, posMustUU, mustUU_linear, pos_mustUU_linear] = findMustUU</strong> (<em>model, minFluxesW, maxFluxesW, varargin</em>)</p>
 </dd>
-<dt class="field-even">INPUTS</dt>
+<dt class="field-even">INPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>model</strong> – (structure) COBRA metabolic model
 with at least the following fields:</p>
@@ -1133,10 +1133,10 @@ e1000744</cite>. <a class="reference external" href="https://doi.org/10.1371/jou
 bilevel mixed integer linear programming problem to find sets of
 interventions that lead to an increased production of a particular target</p>
 <dl class="field-list">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>[optForceSets, posOptForceSets, typeRegOptForceSets, fluxOptForceSets] = optForce</strong> (<em>model, targetRxn, mustU, mustL, minFluxesW, maxFluxesW, minFluxesM, maxFluxesM, k, varargin</em>)</p>
 </dd>
-<dt class="field-even">INPUTS</dt>
+<dt class="field-even">INPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>model</strong> – (structure) COBRA metabolic model
 with at least the following fields:</p>
@@ -1188,7 +1188,7 @@ function <cite>FVAOptForce</cite>.
 E.g.: <cite>maxFluxesM = [90; 56];</cite></p></li>
 </ul>
 </dd>
-<dt class="field-odd">OPTIONAL INPUTS</dt>
+<dt class="field-odd">OPTIONAL INPUTS<span class="colon">:</span></dt>
 <dd class="field-odd"><ul>
 <li><p><strong>k</strong> – (double) number of intervations to be found
 Default <cite>k = 1</cite>;</p></li>
@@ -1258,7 +1258,7 @@ Default: 1</p></li>
 Default: 0</p></li>
 </ul>
 </dd>
-<dt class="field-even">OUTPUTS</dt>
+<dt class="field-even">OUTPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>optForceSets</strong> – (cell array) cell array of size  <cite>n x m</cite>, where
 <cite>n</cite> = number of sets found and <cite>m</cite> = size of sets
@@ -1266,11 +1266,6 @@ found (<cite>k</cite>) Element in position <cite>i</cite>, <cite>j</cite> is rea
 <cite>j</cite> in set <cite>i</cite>.
 E.g.:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 38%" />
-<col style="width: 31%" />
-<col style="width: 31%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p></p></td>
 <td><p>rxn1</p></td>
@@ -1294,11 +1289,6 @@ position of reaction in <cite>optForceSets(i,j)</cite> in
 <cite>model.rxns</cite>
 E.g.:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 38%" />
-<col style="width: 31%" />
-<col style="width: 31%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p></p></td>
 <td><p>rxn1</p></td>
@@ -1322,11 +1312,6 @@ of intervention for reaction in
 <cite>optForceSets(i,j)</cite>
 E.g.:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 39%" />
-<col style="width: 45%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p></p></td>
 <td><p>rxn1</p></td>
@@ -1395,10 +1380,10 @@ e1000744</cite>. <a class="reference external" href="https://doi.org/10.1371/jou
 order Must Sets (<cite>MustU, `MustL</cite>) The inputs will be stored in
 inputFolder.</p>
 <dl class="field-list">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>saveInputsMustSetsFirstOrder</strong> (<em>model, minFluxesW, maxFluxesW, constrOpt,inputFolder</em>)</p>
 </dd>
-<dt class="field-even">INPUTS</dt>
+<dt class="field-even">INPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>model</strong> – (structure) COBRA metabolic model with at least
 the following fields:</p>
@@ -1449,7 +1434,7 @@ E.g.: <cite>struct(‘rxnList’, {{‘EX_gluc’, ‘R75’, ‘EX_suc’}}, �
 function will be stored</p></li>
 </ul>
 </dd>
-<dt class="field-odd">OUTPUTS</dt>
+<dt class="field-odd">OUTPUTS<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>model.mat          File containing the model</strong></p></li>
 <li><p><strong>minFluxesW.mat</strong> – File containing the minimum fluxes for the wild-type</p></li>
@@ -1467,10 +1452,10 @@ function will be stored</p></li>
 order Must Sets (<cite>MustUU</cite>, <cite>MustLL</cite> and <cite>MustUL</cite>) The inputs will be stored in
 inputFolder.</p>
 <dl class="field-list">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>saveInputsMustSetsSecondOrder</strong> (<em>model, minFluxesW, maxFluxesW, constrOpt, excludedRxns, inputFolder</em>)</p>
 </dd>
-<dt class="field-even">INPUTS</dt>
+<dt class="field-even">INPUTS<span class="colon">:</span></dt>
 <dd class="field-even"><ul>
 <li><p><strong>model</strong> – (structure) COBRA metabolic model with at least
 the following fields:</p>
@@ -1525,7 +1510,7 @@ Default: empty.</p></li>
 function will be stored</p></li>
 </ul>
 </dd>
-<dt class="field-odd">OUTPUTS</dt>
+<dt class="field-odd">OUTPUTS<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>model.mat</strong> – File containing the model</p></li>
 <li><p><strong>minFluxesW.mat</strong> – File containing the minimum fluxes for the wild-type</p></li>
@@ -1544,7 +1529,7 @@ function will be stored</p></li>
 order Must Sets (<cite>MustUU</cite>, <cite>MustLL</cite> and <cite>MustUL</cite>) The inputs will be stored in
 inputFolder.</p>
 <dl class="field-list simple">
-<dt class="field-odd">USAGE</dt>
+<dt class="field-odd">USAGE<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>saveInputsOptForce</strong> (<em>model, targetRxn, mustU, mustL, minFluxesW, maxFluxesW, minFluxesM, maxFluxesM, k, nSets, constrOpt, excludedURxns, excludedLRxns, excludedKRxns, inputFolder</em>)</p>
 </dd>
 </dl>
@@ -1618,7 +1603,7 @@ transporters or exchange reactions in the set</p>
 </dd>
 </dl>
 <dl class="field-list simple">
-<dt class="field-odd">OUTPUTS</dt>
+<dt class="field-odd">OUTPUTS<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>model.mat</strong> – File containing the model</p></li>
 <li><p><strong>targetRxn.mat</strong> – File containing the target reaction</p></li>
@@ -1650,7 +1635,7 @@ transporters or exchange reactions in the set</p>
         <a href="../optEnvelope/index.html" class="btn btn-default float-right" title="Optenvelope" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-default" title="Design" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../optForceGAMS/index.html" class="btn btn-default" title="Optforcegams" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1688,9 +1673,6 @@ transporters or exchange reactions in the set</p>
         };
     </script>
     <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
     <script type="text/javascript" src="../../../_static/sphinx_highlight.js"></script>
 
